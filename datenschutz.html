@@ -20,10 +20,10 @@
 <body>
 <main>
   <h1>Datenschutzerklärung</h1>
-  <p class="muted">PolarisOS · Stand: 1. Oktober 2026</p>
+  <p class="muted">PolarisOS · Stand: 15. Oktober 2026</p>
 
   <h2>Worum es geht</h2>
-  <p>PolarisOS ist ein privates, selbst gehostetes Werkzeug für Aufgaben und Termine. Es läuft ausschließlich auf dem eigenen Rechner seines Entwicklers und wird nur von ihm selbst genutzt. Es gibt keine öffentliche Anmeldung und keinen Dienst für andere Personen.</p>
+  <p>PolarisOS ist ein privates, selbst gehostetes Werkzeug für Aufgaben und Termine. Es läuft auf einem vom Entwickler gemieteten virtuellen Server und wird nur von ihm selbst genutzt. Der Server ist nicht öffentlich erreichbar, sondern nur über ein privates, verschlüsseltes Netzwerk (Tailscale) von den eigenen Geräten des Entwicklers. Es gibt keine öffentliche Anmeldung und keinen Dienst für andere Personen.</p>
 
   <h2>Welche Google-Daten verwendet werden</h2>
   <p>Mit ausdrücklicher Zustimmung im Google-Anmeldedialog greift PolarisOS auf den Google Kalender des angemeldeten Nutzers zu (Berechtigung <code>https://www.googleapis.com/auth/calendar</code>), um:</p>
@@ -34,10 +34,15 @@
   <p>Es werden keine anderen Google-Daten abgefragt (kein Gmail, kein Drive, keine Kontakte).</p>
 
   <h2>Speicherung</h2>
-  <p>Alle Daten bleiben auf dem Rechner, auf dem PolarisOS läuft. Das Google-Zugriffstoken wird dort verschlüsselt gespeichert. Es gibt keinen Server eines Dritten, keine Werbung, keine Analyse- oder Tracking-Dienste.</p>
+  <p>Die Daten liegen in einer Datenbank auf dem Server, auf dem PolarisOS läuft. Den Server stellt der Hosting-Anbieter netcup (Rechenzentrum in Nürnberg, Deutschland) bereit. Das Google-Zugriffstoken wird dort verschlüsselt gespeichert.</p>
+  <p>Zur Sicherung wird die Datenbank regelmäßig verschlüsselt (age) und in einem privaten GitHub-Repository des Entwicklers abgelegt. Der Schlüssel zum Entschlüsseln liegt nur beim Entwickler, weder auf dem Server noch bei GitHub.</p>
+  <p>Es gibt keine Werbung und keine Analyse- oder Tracking-Dienste.</p>
+
+  <h2>KI-Assistenten</h2>
+  <p>Der Entwickler kann eigene KI-Assistenten über eine geschützte Schnittstelle (MCP, mit Zugangstoken) mit PolarisOS verbinden. Ein verbundener Assistent kann auf Anfrage des Entwicklers Aufgaben und Termine lesen und anlegen, um ihm dabei zu helfen. Das geschieht nur auf seine Veranlassung und nur für ihn selbst.</p>
 
   <h2>Weitergabe</h2>
-  <p>Daten aus Google-Konten werden nicht an Dritte weitergegeben, nicht verkauft und nicht für Werbung oder zum Trainieren von KI-Modellen verwendet. Die Nutzung von Daten, die über Google-APIs empfangen werden, entspricht der <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, einschließlich der Anforderungen zur eingeschränkten Nutzung (Limited Use).</p>
+  <p>Daten aus Google-Konten werden nicht verkauft, nicht an Dritte für deren eigene Zwecke weitergegeben und nicht für Werbung oder zum Trainieren von KI-Modellen verwendet. Die Nutzung von Daten, die über Google-APIs empfangen werden, entspricht der <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, einschließlich der Anforderungen zur eingeschränkten Nutzung (Limited Use).</p>
 
   <h2>Widerruf</h2>
   <p>Der Zugriff kann jederzeit in den Einstellungen von PolarisOS getrennt oder im Google-Konto unter <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> widerrufen werden. Danach löscht PolarisOS das gespeicherte Token.</p>
